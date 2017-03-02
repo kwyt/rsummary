@@ -1,0 +1,3 @@
+module Rsummary
+  VERSION = "0.1.0"
+end
