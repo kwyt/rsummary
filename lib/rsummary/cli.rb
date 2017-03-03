@@ -1,4 +1,5 @@
 require 'rsummary'
+require 'rsummary/command'
 require 'thor'
 
 module Rsummary
@@ -12,7 +13,9 @@ module Rsummary
     end
 
     desc 'history', 'show histories of summary'
+    method_option 'limit', desc: 'limit', default: 30
     def history 
+      Command.new(options['limit'].to_i).send(__method__.to_sym)
     end
 
     desc 'remove', 'Remove summaries'
