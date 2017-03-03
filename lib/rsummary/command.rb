@@ -22,6 +22,10 @@ module Rsummary
       end
     end
 
+    def remove
+      delete_file
+    end
+
     private
 
     def limit?

@@ -33,5 +33,9 @@ module Rsummary
       end
     end
 
+    def delete_file
+      File.delete(DIR_PATH + FILE_PATH) if file_exists?
+    end
+
   end
 end

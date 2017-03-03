@@ -20,6 +20,7 @@ module Rsummary
 
     desc 'remove', 'Remove summaries'
     def remove
+      Command.new.send(__method__.to_sym)
     end
 
     desc 'status', 'show status of latest summary'
