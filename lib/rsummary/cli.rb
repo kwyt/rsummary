@@ -9,22 +9,22 @@ module Rsummary
 
     desc 'version', 'version'
     def version
-     p Rsummary::VERSION
+      p Rsummary::VERSION
     end
 
-    desc 'history', 'show histories of summary'
+    desc 'history', 'Show histories of summary'
     method_option 'limit', desc: 'limit', default: 30
     def history 
       Command.new(options['limit'].to_i).send(__method__.to_sym)
     end
 
-    desc 'remove', 'Remove summaries'
-    def remove
+    desc 'status', 'Show status of latest summary'
+    def status
       Command.new.send(__method__.to_sym)
     end
 
-    desc 'status', 'Show status of latest summary'
-    def status
+    desc 'remove', 'Remove summaries'
+    def remove
       Command.new.send(__method__.to_sym)
     end
 
