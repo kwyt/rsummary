@@ -23,8 +23,9 @@ module Rsummary
       Command.new.send(__method__.to_sym)
     end
 
-    desc 'status', 'show status of latest summary'
+    desc 'status', 'Show status of latest summary'
     def status
+      Command.new.send(__method__.to_sym)
     end
 
   end

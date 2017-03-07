@@ -1,4 +1,5 @@
 require 'rsummary/file_util'
+require 'rsummary/status'
 
 module Rsummary
   class Command
@@ -24,6 +25,12 @@ module Rsummary
 
     def remove
       delete_file
+    end
+
+    def status
+      return if json_obj.empty?
+
+      Rsummary::Status.new(json_obj).out
     end
 
     private
