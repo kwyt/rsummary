@@ -9,8 +9,6 @@ module Rsummary
     ::RSpec::Core::Formatters.register self, :dump_summary
 
     def dump_summary(notification)
-      super(notification)
-
       summary = summary(notification)
 
       data = if file_exists?
