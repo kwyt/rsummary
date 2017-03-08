@@ -41,9 +41,9 @@ in your .rspec file
 
 ### commands
 
-* `history` - Showing tests output in past
-* `status` - Showing test output at current
-* `remove` - deleting histories 
+* `bundle exec rsummary history` - Showing tests output in past
+* `bundle exec rsummary status` - Showing test output at current
+* `bundle exec rsummary remove` - deleting histories 
 
 
 ## Contributing
