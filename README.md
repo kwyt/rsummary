@@ -2,6 +2,10 @@
 Rsummary is saving tests output as histoties. And it provides simple commands to out for console.
 You can use it easily whenever your timing. if you use it in your project would be a little smoother development.
 
+|history|status|
+|---|---|
+|![screenshot_history](https://raw.githubusercontent.com/kwyt/rsummary/images/history.png)|![screenshot_status](https://raw.githubusercontent.com/kwyt/rsummary/images/status.png)
+
 ## Installation
 
 Add this line to your application's Gemfile:
