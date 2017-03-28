@@ -4,7 +4,7 @@ module Rsummary
   module FileUtil
 
     DIR_PATH ="#{ENV['HOME']}/.rsummary/"
-    FILE_PATH = "rspec_out.json"
+    FILE_NAME = "#{Dir.pwd.split('/').last}_rspec_out.json"
 
     def save_to_file(result)
       make_dir
@@ -13,14 +13,14 @@ module Rsummary
 
     def load_json
       if file_exists?
-        open(DIR_PATH + FILE_PATH) do |io|
+        open(DIR_PATH + FILE_NAME) do |io|
           JSON.load(io)
         end
       end
     end
 
     def file_exists?
-      File.exist?(DIR_PATH + FILE_PATH)
+      File.exist?(DIR_PATH + FILE_NAME)
     end
 
     def make_dir
@@ -28,13 +28,13 @@ module Rsummary
     end
 
     def write_to_file(result)
-      File.open(DIR_PATH + FILE_PATH, "w") do |f|
+      File.open(DIR_PATH + FILE_NAME, "w") do |f|
         f.puts(result)
       end
     end
 
     def delete_file
-      File.delete(DIR_PATH + FILE_PATH) if file_exists?
+      File.delete(DIR_PATH + FILE_NAME) if file_exists?
     end
 
   end
