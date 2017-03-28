@@ -20,6 +20,9 @@ module Rsummary
       save_to_file(data)
     end
 
+    def seed(notification)
+    end
+
     def summary(notification)
       { example_count: notification.example_count,
         pending_count: notification.pending_count,
